@@ -24,4 +24,50 @@
     .s-cards {
         height: 640px;
     }
+
+    .second-section {
+        height: 900px;
+    }
+
+    .third-section {
+        height: 1400px;
+    }
+    .t-num-box {
+        height: 150px;
+    }
+
+    .fourth-section{
+        height: 500px;
+    }
+
+    .fourth-section video:nth-child(2) {
+        width: 300px;
+        height: 200px;
+    }
+
+    .sixth-timer-child h1 {
+        font-size: 45px;
+    }
+
+    .eighth-input-box input {
+        width: 200px;
+    }
+
+    .footer {
+        height: 800px;
+    }
+
+    .t-num-box1 {
+        border-right: none;
+    }
+    .t-num-box3{
+        border-left: none;
+    }
+}
+
+
+@media only screen and (max-width: 440px) {
+    .footer {
+        height: 1000px;
+    }
 }

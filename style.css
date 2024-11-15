@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Gabarito:wght@400..900&family=Kode+Mono:wght@400..700&family=Marcellus&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -12,6 +14,7 @@
 
 :root{
     --dark: rgba(14,14,14,255);
+    --font: "Marcellus", serif;
 }
 
 .main{
@@ -49,6 +52,8 @@
 nav {
     width: 100%;
     height: 100px;
+    position: relative;
+    z-index: 11;
     background-color: var(--dark);
     /* position: sticky;
     top: 0; */
@@ -65,6 +70,12 @@ nav .logo img {
 .nav-links ul li a {
     color: white;
     text-decoration: none;
+    transition: .1s all linear;
+    font-family: var(--font);
+}
+.nav-links ul li a:hover {
+    color: orange;
+    transition: .1s all linear;
 }
 
 .nav-icons i {
@@ -73,7 +84,7 @@ nav .logo img {
 
 .first-section {
     width: 100%;
-    height: 120vh;
+    height: 800px;
     padding-top: 200px;
     background: url(images/image-1-1400x989.jpg);
     background-position: center;
@@ -92,23 +103,40 @@ nav .logo img {
 
 .f-btns button:nth-child(1) {
     padding: 8px 30px;
-    border: 2px solid red;
+    border: 1px solid orange;
     background-color: var(--dark);
+    font-weight: 600;
     color: orange;
+    transition: .1s all linear;
+    font-family: var(--font);
 }
+.f-btns button:nth-child(1):hover {
+    background-color: orange;
+    color: black;
+    transition: .1s all linear;
+}
+
 .f-btns button:nth-child(2) {
     padding: 8px 30px;
-    border: 2px solid rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
     background-color: var(--dark);
     color: white;
+    font-weight: 600;
+    transition: .1s all linear;
+    font-family: var(--font);
+}
+.f-btns button:nth-child(2):hover {
+    background-color: white;
+    color: black;
+    transition: .1s all linear;
 }
 
 
 .second-section {
     width: 100%;
-    height: 130vh;
+    height: 850px;
     position: relative;
-    border: 1px solid pink;
+    background: url(images/fire1.mp4);
 }
 .second-section video {
     width: 100%;
@@ -118,10 +146,9 @@ nav .logo img {
     position: absolute;
     top: 0;
     left: 0;
-    bottom: 0 !important;
+    bottom: 0;
     right: 0;
 }
-
 
 .slider {
     overflow: hidden;
@@ -176,6 +203,201 @@ nav .logo img {
 
 .third-section {
     width: 100%;
-    height: 130vh;
+    height: 800px;
     background-color: var(--dark);
+}
+
+.t-top p {
+    font-size: 20px;
+}
+
+.t-num-box {
+    height: 300px;
+    font-family: var(--font);
+}
+
+.t-num-box1 {
+    border-right: 1px solid rgb(46, 46, 46);
+}
+.t-num-box3{
+    border-left: 1px solid rgb(46, 46, 46);
+}
+
+.fourth-section {
+    height: 700px;
+    position: relative;
+}
+.fourth-section video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.fourth-section video:nth-child(2){
+    width: 650px;
+    height: 400px;
+    margin: auto;
+}
+
+.sixth-section {
+    height: 680px;
+    position: relative;
+    background-image: url(images/image-3.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+}
+.sixth-section::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.589);
+    z-index: -1;
+}
+
+.sixth-top h1 {
+    font-size: 50px;
+    font-family: var(--font);
+}
+
+.sixth-timer-child {
+    font-family: var(--font);
+    
+}
+
+.sixth-timer-child h1 {
+    font-size: 70px;
+}
+
+.seventh-section {
+    height: 700px;
+    position: relative;
+}
+
+
+.seventh-section video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.seventh-slider {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.seventh-slider-track {
+    width: calc(600px * 8);
+    display: flex;
+    animation: seventh-slider 30s linear infinite;
+    align-items: center;
+    gap: 40px;
+}
+
+.seventh-slide {
+    width: 600px;
+    height: 400px;
+    position: relative;
+    background-color: var(--dark);
+}
+.seventh-slide h3 {
+    font-size: 20px;
+    text-align: center;
+    font-family: var(--font);
+}
+.seventh-slide h2{
+    font-family: var(--font);
+}
+
+@keyframes seventh-slider {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-600px * 4));
+    }
+}
+
+.seventh-icon-1 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-image: url(images/avatar-1-150x150.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: -10%;
+}
+
+.eighth-section {
+    background-color: var(--dark);
+    position: relative;
+    height: 500px;
+}
+.eighth-section img{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.eighth-input-box input {
+    width: 350px;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+.eighth-input-box button {
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    transition: .1s all linear;
+}
+.eighth-input-box button:hover {
+    background-color: white;
+    color: black;
+    transition: .1s all linear;
+}
+
+
+
+.footer {
+    height: 500px;
+    background-color: black;
+}
+
+.footer-icons img {
+    width: 150px;
+    padding: 15px 0;
+}
+
+.icon18 {
+    width: 80px !important;
+    height: 80px;
+}
+
+.privacy-policy span {
+    border-bottom: 1px solid white;
 }
